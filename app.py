@@ -3,8 +3,7 @@ import streamlit as st
 from tensorflow.keras.models import load_model
 import numpy as np
 
-st.title("Smhyal")
-st.header("Supporting Mental Health via. AI Learning")
+st.title("Smhyal (Supporting Mental Health via. AI Learning)")
 
 #sidebar information
 with st.sidebar:
