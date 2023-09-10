@@ -50,28 +50,28 @@ mod1 = load_model('depression.h5')
 mod2 = load_model('anxiety.h5')
 li = [0]*9
 #taking inputs
-with st.expander("Age(ranges and values)"):
+with st.expander("Age"):
   st.markdown("""
 - 12-14 years → 2
 - 15-17 years → 3
 - 18-20 years → 4
 - 21-24 years → 5""")
 li[0]=st.number_input('Age',min_value=0)
-with st.expander("Education(ranges and values)"):
+with st.expander("Education"):
   st.markdown("""
 - Special education → 1
 - 6th grade to 8th grade → 2
 - 9th grade to 11th grade → 3
 - 12th grade (or pursuing GED) → 4""")
 li[1] = st.number_input('Education',min_value=0)
-with st.expander("Ethnicity(ranges and values)"):
+with st.expander("Ethnicity"):
   st.markdown("""
 - Mexican → 1
 - Puerto Rican → 2
 - Other Hispanic or Latino Origin → 3
 - Not of Hispanic or Latin Origin → 4""")
 li[2] = st.number_input('Ethnic',min_value=0)
-with st.expander("Race(ranges and values)"):
+with st.expander("Race"):
   st.markdown("""
 - American Indian/Alaska Native → 1
 - Asian → 2
@@ -80,7 +80,7 @@ with st.expander("Race(ranges and values)"):
 - White → 5
 - Some other race alone, or two or more races → 6""")
 li[3] = st.number_input('Race',min_value=0)
-with st.expander("Gender(ranges and values)"):
+with st.expander("Gender"):
   st.markdown("""
 - Male → 1
 - Female → 2""")
@@ -92,7 +92,7 @@ with st.expander("Marital Status(ranges and values)"):
 - Separated → 3
 - Divorced → 4""")
 li[5] = st.number_input('Marital',min_value=0)
-with st.expander("SED(ranges and values)"):
+with st.expander("Serious Emotional/Stressor Disturbance (SED)"):
   st.markdown("""
 - An inability to learn that cannot be explained by intellectual, sensory, or health factors → 2
 - An inability to build or maintain satisfactory interpersonal relationships with peers and teachers → 2
@@ -101,7 +101,7 @@ with st.expander("SED(ranges and values)"):
 - A tendency to develop physical symptoms or fears associated with personal or school problems → 2
 - None of the above symptoms → 3""")
 li[6] = st.number_input('SED',min_value=0)
-with st.expander("Employment(ranges and values)"):
+with st.expander("Employment"):
   st.markdown("""
 - Full-time → 1
 - Part-time → 2
@@ -137,14 +137,14 @@ def predict_mh(new_x_example):
   prediction_dict = {'Depression':depression, "Anxiety":anxiety}
   return prediction_dict
 
-bt = st.button('My Result')
+bt = st.button('Your Results:')
 if bt:
   dic = predict_mh(li)
   if dic.get('Depression') == 0 and dic.get('Anxiety') == 0:
-    st.write("You dont't seem to be depressed or anxious")
+    st.write("You are predicted to neither be depressed nor anxious.")
   if dic.get('Depression') == 1 and dic.get('Anxiety') == 0:
-    st.write('You seem to have depression like symptoms please consult a Psychiatrists')
+    st.write('You are predicted to be depressed, but not anxious. It is recommended that you consult a psychiatrist.')
   if dic.get('Depression') == 0 and dic.get('Anxiety') == 1:
-    st.write('You seem to have anxiety like symptoms please consult a Psychiatrists')
+    st.write('You are predicted to be anxious, but not depressed. It is recommended that you consult a psychiatrist.')
   if dic.get('Depression') == 1 and dic.get('Anxiety') == 1:
-    st.write('You seem to have depression and anxiety like symptoms please consult a Psychiatrists')
+    st.write('You are predicted to be anxious and depressed. It is highly recommended that you consult psychiatrist.')
