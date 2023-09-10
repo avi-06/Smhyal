@@ -143,7 +143,6 @@ elif fiverace:
   li[3] = 5
 else:
   li[3]=6
-li[3] = st.number_input('Race',min_value=0)
 with st.expander("Gender"):
   onegender = st.checkbox('Male')
   twogender = st.checkbox('Female')
@@ -168,7 +167,6 @@ elif fourseperated:
   li[5]=4
 else:
   li[5]=0
-li[5] = st.number_input('Marital',min_value=0)
 with st.expander("Serious Emotional/Stressor Disturbance (SED)"):
   twoop1SED = st.checkbox("An inability to learn that cannot be explained by intellectual, sensory, or health factors")
   twoop2SED = st.checkbox("An inability to build or maintain satisfactory interpersonal relationships with peers and teachers")
