@@ -33,7 +33,7 @@ with st.sidebar:
   - Separated: If you are legally separated or otherwise absent from your spouse because of marital discord""")
   st.markdown("""
   Employment Status:
-  - Full-time: Includes those in full-time employment
+  - Full-time: Includes those under full-time employment, usually working for 30 or more hours per week
   - Not in the labor force: Not employed and not actively looking for work during the past 30 days (i.e. you are not interested in work or you have been discouraged to look for work)""")
   st.markdown("""
   Residential Status
@@ -43,7 +43,7 @@ with st.sidebar:
   """)
 
   st.header("Additional Information")
-  st.markdown("""The Smhyal algorithm is based on a modified version of an artificial neural network (ANN), with an accuracy of more than 94% anxiety and depression diagnosis. The model was trained on the data for young adults from the publicly-available Substance Abuse and Mental Health Service Administration (SAMHSA) MH-CLD survey dataset. The algorithm was created by Avi Verma, under the guidance of Dr. Kaustubh Supekar at Stanford University. We hope that Smyhal will positively impact young adults by counteracting the underdiagnosis of anxiety and depression.""")
+  st.markdown("""The Smhyal algorithm is based on a modified version of an artificial neural network (ANN), with accuracies greater than 94% for  anxiety and depression diagnosis. The model was trained on large-scale data for young adults from the publicly-available Substance Abuse and Mental Health Service Administration (SAMHSA) MH-CLD survey dataset. The algorithms used were created by Avi Verma, under the guidance of Dr. Kaustubh Supekar at Stanford University. We hope that Smyhal will help in postively impact young adults by counteracting the underdiagnosis of anxiety and depression.""")
   st.markdown("""None of the data entered in the form or the diagnosis outputs are ever stored or traced.""")
   
 #importing models
@@ -52,69 +52,59 @@ mod2 = load_model('anxiety.h5')
 li = [0]*9
 #taking inputs
 with st.expander("Age"):
-  st.markdown("""
-- 12-14 years → 2
-- 15-17 years → 3
-- 18-20 years → 4
-- 21-24 years → 5""")
+  twoage = st.checkdown('12-14 years old')
+  threeage = st.checkdown('15-17 years old')
+  fourage = st.checkdown('18-20 years old')
+  fiveage = st.checkdown('21-24 years old')
 li[0]=st.number_input('Age',min_value=0)
 with st.expander("Education"):
-  st.markdown("""
-- Special education → 1
-- 6th grade to 8th grade → 2
-- 9th grade to 11th grade → 3
-- 12th grade (or pursuing GED) → 4""")
+  oneedu = st.checkdown('Special education')
+  twoedu = st.checkdown('6th grade to 8th grade')
+  threeedu = st.checkdown('9th grade to 11th grade')
+  fouredu = st.checkdown('12th grade or pursuing GED')
 li[1] = st.number_input('Education',min_value=0)
 with st.expander("Ethnicity"):
-  st.markdown("""
-- Mexican → 1
-- Puerto Rican → 2
-- Other Hispanic or Latino Origin → 3
-- Not of Hispanic or Latin Origin → 4""")
+  oneethnic = st.checkdown('Mexican')
+  twoethnic = st.checkdown('Puerto Rican')
+  threeethnic = st.checkdown('Other Hispanic or Latino origin')
+  fourethnic = st.checkdown('Not of Hispanic or Latino origin')
 li[2] = st.number_input('Ethnic',min_value=0)
 with st.expander("Race"):
-  st.markdown("""
-- American Indian/Alaska Native → 1
-- Asian → 2
-- African or African-American → 3
-- Native Hawaiian or Pacific Islander → 4
-- White → 5
-- Some other race alone, or two or more races → 6""")
+  onerace = st.checkdown('American Indian/Aslaka Native')
+  tworace = st.checkdown('Asian')
+  threerace = st.checkdown('African or African-American')
+  fourrace = st.checkdown('Native Hawaiian or Pacific Islander')
+  fiverace = st.checkdown('White')
+  sixrace = st.checkdown('Some other race alone, or two or more races')
 li[3] = st.number_input('Race',min_value=0)
 with st.expander("Gender"):
-  st.markdown("""
-- Male → 1
-- Female → 2""")
+  onerace = st.checkdown('Male')
+  tworace = st.checkdown('Female')
 li[4] = st.number_input('Gender',min_value=-10,value=0)
 with st.expander("Marital Status(ranges and values)"):
-  st.markdown("""
-- Never married → 1
-- Now married → 2
-- Separated → 3
-- Divorced → 4""")
+  onemarried = st.checkdown('Never married')
+  twomarried = st.checkdown('Now married')
+  threemaried = st.checkdown('Seperated')
+  fourseperated = st.checkdown('Divorced')
 li[5] = st.number_input('Marital',min_value=0)
 with st.expander("Serious Emotional/Stressor Disturbance (SED)"):
-  st.markdown("""
-- An inability to learn that cannot be explained by intellectual, sensory, or health factors → 2
-- An inability to build or maintain satisfactory interpersonal relationships with peers and teachers → 2
-- Inappropriate types of behavior or feelings under normal circumstances → 2
-- A general pervasive mood of unhappiness or depression → 2
-- A tendency to develop physical symptoms or fears associated with personal or school problems → 2
-- None of the above symptoms → 3""")
+  twoop1SED = st.checkdown("An inability to learn that cannot be explained by intellectual, sensory, or health factors")
+  twoop2SED = st.checkdown("An inability to build or maintain satisfactory interpersonal relationships with peers and teachers")
+  twoop3SED = st.checkdown("Inappropriate types of behavior or feelings under normal circumstances")
+  twoop4SED = st.checkdown("A general pervasive mood of unhappiness, recurrent every one or two weeks")
+  twoop5SED = st.checkdown("A tendency to develop physical symptoms or fears associated with personal or school problems")
+  threeSED = st.checkdown(" None of the above symptoms")
 li[6] = st.number_input('SED',min_value=0)
 with st.expander("Employment"):
-  st.markdown("""
-- Full-time → 1
-- Part-time → 2
-- Unemployed → 4
-- Not in the labor force → 5""")
+  oneemploy = st.checkdown("Full-time")
+  twoemploy = st.checkdown("Part-time")
+  fouremploy = st.checkdown("Unemployed")
+  fiveemploy = st.checkdown("Not in labor force")
 li[7] = st.number_input('Employment',min_value=0)
-with st.expander("Residential(ranges and values)"):
-  st.markdown("""
-- Homeless → 1
-- Private Residence → 2
-- Other → 3
-""")
+with st.expander("Residential"):
+  tworesi = st.checkdown("Private residence")
+  oneresi = st.checkdown("Homeless")
+  threeresi = st.checkdown("Other residential status")
 li[8] = st.number_input('Residential',min_value=0)
 
 def predict_mh(new_x_example):
