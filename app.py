@@ -86,11 +86,11 @@ with st.expander("Age"):
   fiveage = st.checkbox('21-24 years old')
 if twoage:
   li[0]=2
-else if threeage:
+elif threeage:
   li[0]=3
-else if fourage:
+elif fourage:
   li[0]=4
-else if fiveage:
+elif fiveage:
   li[0]=5
 else:
   li[0]=0
@@ -101,11 +101,11 @@ with st.expander("Education"):
   fouredu = st.checkbox('12th grade or pursuing GED')
 if oneedu:
   li[1]=1
-else if twoedu:
+elif twoedu:
   li[1]=2
-else if threeedu:
+elif threeedu:
   li[1]=3
-else if fouredu:
+elif fouredu:
   li[1]=4
 else:
   li[1]=0
@@ -116,11 +116,11 @@ with st.expander("Ethnicity"):
   fourethnic = st.checkbox('Not of Hispanic or Latino origin')
 if oneethnic:
   li[2]=1
-else if twoethnic:
+elif twoethnic:
   li[2]=2
-else if threeethnic:
+elif threeethnic:
   li[2]=3
-else if fourethnic:
+elif fourethnic:
   li[2]=4
 else:
   li[2]=0
@@ -133,13 +133,13 @@ with st.expander("Race"):
   sixrace = st.checkbox('Some other race alone, or two or more races')
 if onerace:
   li[3]=1
-else if tworace:
+elif tworace:
   li[3]=2
-else if threerace:
+elif threerace:
   li[3]=3
-else if fourrace:
+elif fourrace:
   li[3]=4
-else if fiverace:
+elif fiverace:
   li[3] = 5
 else:
   li[3]=6
@@ -160,11 +160,11 @@ with st.expander("Marital Status"):
   fourseperated = st.checkbox('Divorced')
 if onemarried:
   li[5]=1
-else if twomarried:
+elif twomarried:
   li[5]=2
-else if threemaried:
+elif threemaried:
   li[5]=3
-else if fourseperated:
+elif fourseperated:
   li[5]=4
 else:
   li[5]=0
@@ -189,11 +189,11 @@ with st.expander("Employment"):
   fiveemploy = st.checkbox("Not in labor force")
 if oneemploy:
   li[7]=1
-else if twoemploy:
+elif twoemploy:
   li[7]=2
-else if fouremploy:
+elif fouremploy:
   li[7]=4
-else if fiveemploy:
+elif fiveemploy:
   li[7]=5
 else:
   li[7]=0
@@ -203,9 +203,9 @@ with st.expander("Residential"):
   threeresi = st.checkbox("Other residential status")
 if tworesi:
   li[8]=2
-else if oneresi:
+elif oneresi:
   li[8]=1
-else if threeresi:
+elif threeresi:
   li[8]=3
 else:
   li[8]=0
