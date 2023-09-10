@@ -81,7 +81,7 @@ with st.expander("Gender"):
   onerace = st.checkbox('Male')
   tworace = st.checkbox('Female')
 li[4] = st.number_input('Gender',min_value=-10,value=0)
-with st.expander("Marital Status(ranges and values)"):
+with st.expander("Marital Status"):
   onemarried = st.checkbox('Never married')
   twomarried = st.checkbox('Now married')
   threemaried = st.checkbox('Seperated')
