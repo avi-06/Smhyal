@@ -4,7 +4,7 @@ from tensorflow.keras.models import load_model
 import numpy as np
 
 st.title("Smhyal")
-st.subtitle("Supporting Mental Health via. AI Learning")
+st.header("Supporting Mental Health via. AI Learning")
 
 #sidebar information
 with st.sidebar:
