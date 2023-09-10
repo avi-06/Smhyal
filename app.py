@@ -195,7 +195,7 @@ elif fiveemploy:
   li[7]=5
 else:
   li[7]=0
-with st.expander("Residential"):
+with st.expander("Residential Status"):
   tworesi = st.checkbox("Private residence")
   oneresi = st.checkbox("Homeless")
   threeresi = st.checkbox("Other residential status")
