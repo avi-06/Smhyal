@@ -84,19 +84,46 @@ with st.expander("Age"):
   threeage = st.checkbox('15-17 years old')
   fourage = st.checkbox('18-20 years old')
   fiveage = st.checkbox('21-24 years old')
-li[0]=st.number_input('Age',min_value=0)
+if twoage:
+  li[0]=2
+else if threeage:
+  li[0]=3
+else if fourage:
+  li[0]=4
+else if fiveage:
+  li[0]=5
+else:
+  li[0]=0
 with st.expander("Education"):
   oneedu = st.checkbox('Special education')
   twoedu = st.checkbox('6th grade to 8th grade')
   threeedu = st.checkbox('9th grade to 11th grade')
   fouredu = st.checkbox('12th grade or pursuing GED')
-li[1] = st.number_input('Education',min_value=0)
+if oneedu:
+  li[1]=1
+else if twoedu:
+  li[1]=2
+else if threeedu:
+  li[1]=3
+else if fouredu:
+  li[1]=4
+else:
+  li[1]=0
 with st.expander("Ethnicity"):
   oneethnic = st.checkbox('Mexican')
   twoethnic = st.checkbox('Puerto Rican')
   threeethnic = st.checkbox('Other Hispanic or Latino origin')
   fourethnic = st.checkbox('Not of Hispanic or Latino origin')
-li[2] = st.number_input('Ethnic',min_value=0)
+if oneethnic:
+  li[2]=1
+else if twoethnic:
+  li[2]=2
+else if threeethnic:
+  li[2]=3
+else if fourethnic:
+  li[2]=4
+else:
+  li[2]=0
 with st.expander("Race"):
   onerace = st.checkbox('American Indian/Aslaka Native')
   tworace = st.checkbox('Asian')
@@ -104,16 +131,43 @@ with st.expander("Race"):
   fourrace = st.checkbox('Native Hawaiian or Pacific Islander')
   fiverace = st.checkbox('White')
   sixrace = st.checkbox('Some other race alone, or two or more races')
+if onerace:
+  li[3]=1
+else if tworace:
+  li[3]=2
+else if threerace:
+  li[3]=3
+else if fourrace:
+  li[3]=4
+else if fiverace:
+  li[3] = 5
+else:
+  li[3]=6
 li[3] = st.number_input('Race',min_value=0)
 with st.expander("Gender"):
-  onerace = st.checkbox('Male')
-  tworace = st.checkbox('Female')
-li[4] = st.number_input('Gender',min_value=-10,value=0)
+  onegender = st.checkbox('Male')
+  twogender = st.checkbox('Female')
+if onegender:
+  li[4]=1
+if twogender:
+  li[4]=2
+else:
+  li[4]=0
 with st.expander("Marital Status"):
   onemarried = st.checkbox('Never married')
   twomarried = st.checkbox('Now married')
   threemaried = st.checkbox('Seperated')
   fourseperated = st.checkbox('Divorced')
+if onemarried:
+  li[5]=1
+else if twomarried:
+  li[5]=2
+else if threemaried:
+  li[5]=3
+else if fourseperated:
+  li[5]=4
+else:
+  li[5]=0
 li[5] = st.number_input('Marital',min_value=0)
 with st.expander("Serious Emotional/Stressor Disturbance (SED)"):
   twoop1SED = st.checkbox("An inability to learn that cannot be explained by intellectual, sensory, or health factors")
@@ -121,19 +175,40 @@ with st.expander("Serious Emotional/Stressor Disturbance (SED)"):
   twoop3SED = st.checkbox("Inappropriate types of behavior or feelings under normal circumstances")
   twoop4SED = st.checkbox("A general pervasive mood of unhappiness, recurrent every one or two weeks")
   twoop5SED = st.checkbox("A tendency to develop physical symptoms or fears associated with personal or school problems")
-  threeSED = st.checkbox(" None of the above symptoms")
-li[6] = st.number_input('SED',min_value=0)
+  threeSED = st.checkbox("None of the above symptoms")
+if twoop1SED or twoop2SED or twoop3SED or twoop4SED or twoop5SED:
+  li[6]=2
+if threeSED:
+  li[6]=3
+else:
+  li[6]=3
 with st.expander("Employment"):
   oneemploy = st.checkbox("Full-time")
   twoemploy = st.checkbox("Part-time")
   fouremploy = st.checkbox("Unemployed")
   fiveemploy = st.checkbox("Not in labor force")
-li[7] = st.number_input('Employment',min_value=0)
+if oneemploy:
+  li[7]=1
+else if twoemploy:
+  li[7]=2
+else if fouremploy:
+  li[7]=4
+else if fiveemploy:
+  li[7]=5
+else:
+  li[7]=0
 with st.expander("Residential"):
   tworesi = st.checkbox("Private residence")
   oneresi = st.checkbox("Homeless")
   threeresi = st.checkbox("Other residential status")
-li[8] = st.number_input('Residential',min_value=0)
+if tworesi:
+  li[8]=2
+else if oneresi:
+  li[8]=1
+else if threeresi:
+  li[8]=3
+else:
+  li[8]=0
 
 def predict_mh(new_x_example):
   new_example_reshaped = np.asarray(li).reshape((1, 9))
