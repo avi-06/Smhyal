@@ -3,6 +3,39 @@ import streamlit as st
 from tensorflow.keras.models import load_model
 import numpy as np
 
+hide_streamlit_style = """
+                <style>
+                div[data-testid="stToolbar"] {
+                visibility: hidden;
+                height: 0%;
+                position: fixed;
+                }
+                div[data-testid="stDecoration"] {
+                visibility: hidden;
+                height: 0%;
+                position: fixed;
+                }
+                div[data-testid="stStatusWidget"] {
+                visibility: hidden;
+                height: 0%;
+                position: fixed;
+                }
+                #MainMenu {
+                visibility: hidden;
+                height: 0%;
+                }
+                header {
+                visibility: hidden;
+                height: 0%;
+                }
+                footer {
+                visibility: hidden;
+                height: 0%;
+                }
+                </style>
+                """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
+
 st.title("Smhyal")
 st.subheader("Supporting Mental Health via. AI Learning")
 st.markdown("""Smhyal is an all-in-one tool for rapid self-diagnosis for two of the most common, yet critical, psychological disorders among young adults: anxiety and depression.""")
