@@ -5,7 +5,7 @@ import numpy as np
 
 st.title("Smhyal")
 st.subheader("Supporting Mental Health via. AI Learning")
-st.markdown("""Smhyal is an all-in-one tool for simple self-diagnosis for two of the most common, yet critical, psychological disorders among young adults: anxiety and depression.""")
+st.markdown("""Smhyal is an all-in-one tool for rapid self-diagnosis for two of the most common, yet critical, psychological disorders among young adults: anxiety and depression.""")
 
 #sidebar information
 with st.sidebar:
