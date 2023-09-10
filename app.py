@@ -65,8 +65,8 @@ with st.sidebar:
   - Not in the labor force: Not employed and not actively looking for work during the past 30 days (i.e. you are not interested in work or you have been discouraged to look for work)""")
   st.markdown("""
   Residential Status
-  - Homeless: Those who have no fixed address, including homeless shelters
   - Private residence: Includes those who live independently, dependently (living in a house, apartment, or other similar dwellings and are heavily dependent on others for daily living assistance), and those under the age of 18 years living in a private residence, regardless of living arrangement
+  - Homeless: Those who have no fixed address, including homeless shelters
   - Other: Those living in a foster home or a care center, residential care facility, crisis residence, institutional care facility, jail and/or correctional facility, or other residential status
   """)
 
