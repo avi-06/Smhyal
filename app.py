@@ -8,10 +8,7 @@ st.title("Smhyal")
 #sidebar information
 with st.sidebar:
   st.title("Supporting Mental Health via. AI Learning")
-  st.subheader("Supporting Mental Health in Youth via. AI Learning, or Smhyal, is an all-in-one tool for simple self-diagnosis for two of the most common, yet critical, psychological disorders among youth: anxiety and depression.")
-  st.subheader("The Smhyal algorithm is based on a modified version of an artificial neural network (ANN), with an accuracy of more than 94% anxiety and depression diagnosis. The model was trained on the data for young adults from the publicly-available Substance Abuse and Mental Health Service Administration (SAMHSA) MH-CLD survey dataset. The algorithm was created by Avi Verma, under the guidance of Dr. Kaustubh Supekar at Stanford University. We hope that Smyhal will positively impact young adults by counteracting the underdiagnosis of anxiety and depression.")
-  st.subheader("None of the data entered in the form or the diagnosis outputs are ever stored or traced.")
-  st.header("Additional FAQ")
+  st.header("FAQ")
   st.markdown("""
   Education:
   - If you are under 18 years of age: current grade level for school (if attended in the past three months) or highest level ever attended (if not attended within the past three months
@@ -43,6 +40,10 @@ with st.sidebar:
   - Private residence: Includes those who live independently, dependently (living in a house, apartment, or other similar dwellings and are heavily dependent on others for daily living assistance), and those under the age of 18 years living in a private residence, regardless of living arrangement
   - Other: Those living in a foster home or a care center, residential care facility, crisis residence, institutional care facility, jail and/or correctional facility, or other residential status
   """)
+  
+  st.subheader("Supporting Mental Health in Youth via. AI Learning, or Smhyal, is an all-in-one tool for simple self-diagnosis for two of the most common, yet critical, psychological disorders among youth: anxiety and depression.")
+  st.subheader("The Smhyal algorithm is based on a modified version of an artificial neural network (ANN), with an accuracy of more than 94% anxiety and depression diagnosis. The model was trained on the data for young adults from the publicly-available Substance Abuse and Mental Health Service Administration (SAMHSA) MH-CLD survey dataset. The algorithm was created by Avi Verma, under the guidance of Dr. Kaustubh Supekar at Stanford University. We hope that Smyhal will positively impact young adults by counteracting the underdiagnosis of anxiety and depression.")
+  st.subheader("None of the data entered in the form or the diagnosis outputs are ever stored or traced.")
   
 #importing models
 mod1 = load_model('depression.h5')
