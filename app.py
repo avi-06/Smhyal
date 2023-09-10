@@ -44,7 +44,7 @@ with st.sidebar:
 
   st.header("Additional Information")
   st.markdown("""The Smhyal algorithm is based on a modified version of an artificial neural network (ANN), with an accuracy of more than 94% anxiety and depression diagnosis. The model was trained on the data for young adults from the publicly-available Substance Abuse and Mental Health Service Administration (SAMHSA) MH-CLD survey dataset. The algorithm was created by Avi Verma, under the guidance of Dr. Kaustubh Supekar at Stanford University. We hope that Smyhal will positively impact young adults by counteracting the underdiagnosis of anxiety and depression.""")
-  st.subheader("None of the data entered in the form or the diagnosis outputs are ever stored or traced.")
+  st.markdown("""None of the data entered in the form or the diagnosis outputs are ever stored or traced.""")
   
 #importing models
 mod1 = load_model('depression.h5')
