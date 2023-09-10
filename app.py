@@ -167,7 +167,7 @@ elif fourseperated:
   li[5]=4
 else:
   li[5]=0
-with st.expander("Serious Emotional/Stressor Disturbance (SED)"):
+with st.expander("Emotional Disturbance"):
   twoop1SED = st.checkbox("An inability to learn that cannot be explained by intellectual, sensory, or health factors")
   twoop2SED = st.checkbox("An inability to build or maintain satisfactory interpersonal relationships with peers and teachers")
   twoop3SED = st.checkbox("Inappropriate types of behavior or feelings under normal circumstances")
