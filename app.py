@@ -223,6 +223,7 @@ def predict_mh(new_x_example):
   new_example_reshaped = np.asarray(li).reshape((1, 9))
   my_new_prediction = mod1.predict(new_example_reshaped)
   st.write(li[6])
+  st.write(twoop1SED, twoop2SED, twoop3SED, twoop4SED, twoop5SED)
   st.write(my_new_prediction.flatten()[0])
   depression = -1
   if (my_new_prediction.flatten()[0] > 0.3):
