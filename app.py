@@ -243,5 +243,12 @@ if bt:
     st.write('You are predicted to be anxious, but not depressed. It is recommended that you consult a psychiatrist.')
   if dic.get('Depression') == 1 and dic.get('Anxiety') == 1:
     st.write('You are predicted to be anxious and depressed. It is highly recommended that you consult psychiatrist.')
-  for i in range(1, 9):
-    print(li[i])
+  print(li[0])
+  print(li[1])
+  print(li[2])
+  print(li[3])
+  print(li[4])
+  print(li[5])
+  print(li[6])
+  print(li[7])
+  print(li[8])
