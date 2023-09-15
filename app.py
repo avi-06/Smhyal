@@ -38,6 +38,7 @@ st.markdown("""Smhyal is an all-in-one tool for rapid self-diagnosis for two of 
 #sidebar information
 with st.sidebar:
   st.write("")
+  st.write("")
   st.header("About Smhyal")
   
   st.markdown("""The Smhyal algorithm is based on a modified version of an artificial neural network (ANN), with accuracies greater than 94% for  anxiety and depression diagnosis. The model was trained on large-scale data for young adults from the publicly-available Substance Abuse and Mental Health Service Administration (SAMHSA) MH-CLD survey dataset. The algorithm was created by Avi Verma, under the guidance of Dr. Kaustubh Supekar at Stanford University. We hope that Smyhal will help in postively impact young adults by counteracting the underdiagnosis of anxiety and depression.""")
