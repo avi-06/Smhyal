@@ -214,6 +214,7 @@ else:
 def predict_mh(new_x_example):
   new_example_reshaped = np.asarray(li).reshape((1, 9))
   my_new_prediction = mod1.predict(new_example_reshaped)
+  st.write(my_new_prediction)
   print(my_new_prediction)
   depression = -1
   if (my_new_prediction.flatten()[0] > 0.4):
@@ -243,4 +244,3 @@ if bt:
     st.write('You are predicted to be anxious, but not depressed. It is recommended that you consult a psychiatrist.')
   if dic.get('Depression') == 1 and dic.get('Anxiety') == 1:
     st.write('You are predicted to be anxious and depressed. It is highly recommended that you consult psychiatrist.')
-  st.write(anxiety, depression)
