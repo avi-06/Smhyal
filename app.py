@@ -243,4 +243,4 @@ if bt:
     st.write('You are predicted to be anxious, but not depressed. It is recommended that you consult a psychiatrist.')
   if dic.get('Depression') == 1 and dic.get('Anxiety') == 1:
     st.write('You are predicted to be anxious and depressed. It is highly recommended that you consult psychiatrist.')
-  print(my_new_prediction, my_new_prediction_a)
+  st.write(my_new_prediction, my_new_prediction_a)
