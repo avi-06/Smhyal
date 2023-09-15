@@ -179,15 +179,15 @@ with st.expander("Emotional Disturbance"):
   threeSED = st.checkbox("None of the above symptoms")
 if twoop1SED:
   li[6]=2
-if twoop2SED:
+elif twoop2SED:
   li[6]=2
-if twoop3SED:
+elif twoop3SED:
   li[6]=2
-if twoop4SED:
+elif twoop4SED:
   li[6]=2
-if twoop5SED:
+elif twoop5SED:
   li[6]=2
-if threeSED:
+elif threeSED:
   li[6]=3
 else:
   li[6]=3
@@ -222,8 +222,6 @@ else:
 def predict_mh(new_x_example):
   new_example_reshaped = np.asarray(li).reshape((1, 9))
   my_new_prediction = mod1.predict(new_example_reshaped)
-  st.write(li[6])
-  st.write(twoop1SED, twoop2SED, twoop3SED, twoop4SED, twoop5SED)
   st.write(my_new_prediction.flatten()[0])
   depression = -1
   if (my_new_prediction.flatten()[0] > 0.3):
