@@ -189,8 +189,8 @@ elif twoop5SED:
   li[6]=2
 elif threeSED:
   li[6]=3
-#else:
-  #li[6]=3
+else:
+  li[6]=3
 with st.expander("Employment"):
   oneemploy = st.checkbox("Full-time")
   twoemploy = st.checkbox("Part-time")
@@ -218,7 +218,6 @@ elif threeresi:
   li[8]=3
 else:
   li[8]=0
-
 def predict_mh(new_x_example):
   new_example_reshaped = np.asarray(li).reshape((1, 9))
   my_new_prediction = mod1.predict(new_example_reshaped)
