@@ -244,7 +244,7 @@ if bt:
   if dic.get('Depression') == 1 and dic.get('Anxiety') == 1:
     st.write('You are predicted to be anxious and depressed. It is highly recommended that you consult psychiatrist.')
   print(li[0])
-  print(li[1])
+  #print(li[1])
   #print(li[2])
   #print(li[3])
   #print(li[4])
