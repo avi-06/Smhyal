@@ -221,7 +221,7 @@ else:
 def predict_mh(new_x_example):
   new_example_reshaped = np.asarray(li).reshape((1, 9))
   my_new_prediction = mod1.predict(new_example_reshaped)
-  st.write(my_new_prediction.flatten()[0])
+  #st.write(my_new_prediction.flatten()[0])
   depression = -1
   if (my_new_prediction.flatten()[0] > 0.3):
     depression = 1
@@ -229,7 +229,7 @@ def predict_mh(new_x_example):
     depression = 0
 
   my_new_prediction_a = mod2.predict(new_example_reshaped)
-  st.write(my_new_prediction_a.flatten()[0])
+  #st.write(my_new_prediction_a.flatten()[0])
   anxiety = -1
   if (my_new_prediction_a.flatten()[0] > 0.3):
     anxiety = 1
