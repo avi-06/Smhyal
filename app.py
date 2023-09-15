@@ -187,8 +187,8 @@ elif twoop4SED:
   li[6]=2
 elif twoop5SED:
   li[6]=2
-#elif threeSED:
-  #li[6]=3
+elif threeSED:
+  li[6]=3
 #else:
   #li[6]=3
 with st.expander("Employment"):
