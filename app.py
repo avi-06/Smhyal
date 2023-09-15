@@ -245,4 +245,3 @@ if bt:
     st.write('You are predicted to be anxious and depressed. It is highly recommended that you consult psychiatrist.')
   for i in range(1, 9):
     print(li[i])
-
