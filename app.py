@@ -177,7 +177,15 @@ with st.expander("Emotional Disturbance"):
   twoop4SED = st.checkbox("A general pervasive mood of unhappiness, recurrent every one or two weeks")
   twoop5SED = st.checkbox("A tendency to develop physical symptoms or fears associated with personal or school problems")
   threeSED = st.checkbox("None of the above symptoms")
-if twoop1SED or twoop2SED or twoop3SED or twoop4SED or twoop5SED:
+if twoop1SED:
+  li[6]=2
+if twoop2SED:
+  li[6]=2
+if twoop3SED:
+  li[6]=2
+if twoop4SED:
+  li[6]=2
+if twoop5SED:
   li[6]=2
 if threeSED:
   li[6]=3
