@@ -222,14 +222,14 @@ def predict_mh(new_x_example):
   new_example_reshaped = np.asarray(li).reshape((1, 9))
   my_new_prediction = mod1.predict(new_example_reshaped)
   depression = -1
-  if (my_new_prediction.flatten()[0] > 0.25):
+  if (my_new_prediction.flatten()[0] > 0.3):
     depression = 1
   else:
     depression = 0
 
   my_new_prediction_a = mod2.predict(new_example_reshaped)
   anxiety = -1
-  if (my_new_prediction_a.flatten()[0] > 0.25):
+  if (my_new_prediction_a.flatten()[0] > 0.3):
     anxiety = 1
   else:
     anxiety = 0
@@ -241,10 +241,10 @@ bt = st.button('Your Results:')
 if bt:
   dic = predict_mh(li)
   if dic.get('Depression') == 0 and dic.get('Anxiety') == 0:
-    st.write("You are predicted to neither be depressed nor anxious.")
+    st.write("You are predicted to have neither anxiety nor depression.")
   if dic.get('Depression') == 1 and dic.get('Anxiety') == 0:
-    st.write('You are predicted to be depressed, but not anxious. It is recommended that you consult a psychiatrist.')
+    st.write('You are predicted to have depression, but not anxiety. It is recommended that you consult a psychiatrist.')
   if dic.get('Depression') == 0 and dic.get('Anxiety') == 1:
-    st.write('You are predicted to be anxious, but not depressed. It is recommended that you consult a psychiatrist.')
+    st.write('You are predicted to have anxiety, but not depression. It is recommended that you consult a psychiatrist.')
   if dic.get('Depression') == 1 and dic.get('Anxiety') == 1:
-    st.write('You are predicted to be anxious and depressed. It is highly recommended that you consult psychiatrist.')
+    st.write('You are predicted to have both anxiety and depression. It is highly recommended that you consult psychiatrist.')
