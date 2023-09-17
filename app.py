@@ -247,4 +247,4 @@ if bt:
   if dic.get('Depression') == 0 and dic.get('Anxiety') == 1:
     st.write('You are predicted to have anxiety, but not depression. It is recommended that you consult a psychiatrist.')
   if dic.get('Depression') == 1 and dic.get('Anxiety') == 1:
-    st.write('You are predicted to have both anxiety and depression. It is highly recommended that you consult psychiatrist.')
+    st.write('You are predicted to have both anxiety and depression. It is highly recommended that you consult a psychiatrist.')
