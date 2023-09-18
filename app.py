@@ -37,8 +37,6 @@ st.markdown("""Smhyal is an all-in-one tool for rapid self-diagnosis for two of 
 
 #sidebar information
 with st.sidebar:
-  st.write("")
-  st.write("")
 
   st.markdown(
         f"""
