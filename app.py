@@ -42,7 +42,7 @@ with st.sidebar:
         f"""
             <style>
                 [data-testid="stSidebar"] {{
-                    background-image: url(http://placekitten.com/120/120);
+                    background-image: url(https://drive.google.com/uc?export=view&id=19bGh52gQKRQt_8G_3k5j1mW8FqUB5Plm);
                     background-repeat: no-repeat;
                     padding-top: 80px;
                     background-position: 40px 40px;
