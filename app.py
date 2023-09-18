@@ -45,7 +45,7 @@ with st.sidebar:
                     background-image: url(http://placekitten.com/120/120);
                     background-repeat: no-repeat;
                     padding-top: 80px;
-                    background-position: 20px 20px;
+                    background-position: 40px 40px;
                 }}
             </style>
             """,
