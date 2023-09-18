@@ -45,7 +45,7 @@ with st.sidebar:
                     background-image: url(https://drive.google.com/uc?export=view&id=19bGh52gQKRQt_8G_3k5j1mW8FqUB5Plm);
                     background-repeat: no-repeat;
                     padding-top: 80px;
-                    background-position: 100px 100px;
+                    background-position: 10px 10px;
                 }}
             </style>
             """,
