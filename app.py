@@ -44,7 +44,7 @@ with st.sidebar:
                 [data-testid="stSidebar"] {{
                     background-image: url(https://drive.google.com/uc?export=view&id=19bGh52gQKRQt_8G_3k5j1mW8FqUB5Plm);
                     background-repeat: no-repeat;
-                    padding-top: 80px;
+                    padding-top: 10px;
                     background-position: 10px 10px;
                 }}
             </style>
