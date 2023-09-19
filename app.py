@@ -167,7 +167,7 @@ if onegender:
   li[4]=1
 if twogender:
   li[4]=2
-if threegender:
+elif threegender:
   li[4]=-9
 else:
   li[4]=0
