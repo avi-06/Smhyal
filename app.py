@@ -162,10 +162,13 @@ else:
 with st.expander("Gender"):
   onegender = st.checkbox('Male')
   twogender = st.checkbox('Female')
+  threegender = st.checkbox('Other')
 if onegender:
   li[4]=1
 if twogender:
   li[4]=2
+if threegender:
+  li[4]=-9
 else:
   li[4]=0
 with st.expander("Marital Status"):
