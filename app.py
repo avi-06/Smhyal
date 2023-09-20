@@ -46,7 +46,7 @@ with st.sidebar:
                     background-repeat: no-repeat;
                     padding-top: 10px;
                     background-position: 10px 10px;
-                    background-size: 100px 100px
+                    background-size: 10px 10px
                 }}
             </style>
             """,
