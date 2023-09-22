@@ -38,7 +38,7 @@ st.markdown("""Smhyal is an all-in-one tool for rapid self-diagnosis for two of 
 #sidebar information
 with st.sidebar:
 
-  st.markdown(
+  """st.markdown(
         f"""
             <style>
                 [data-testid="stSidebar"] {{
@@ -51,7 +51,7 @@ with st.sidebar:
             </style>
             """,
         unsafe_allow_html=True,
-  )
+  )"""
   
   st.header("About Smhyal")
   
