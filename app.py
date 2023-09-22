@@ -55,7 +55,7 @@ with st.sidebar:
   
   st.header("About Smhyal")
   
-  st.markdown("""The Smhyal algorithm is based on a modified version of an artificial neural network (ANN), with accuracies greater than 94% for  anxiety and depression diagnosis. The model was trained on large-scale data for young adults from the publicly-available Substance Abuse and Mental Health Service Administration (SAMHSA) Mental Health Client Level Data (MH-CLD) survey set. The algorithm was created by Avi Verma, in collaboration with Stanford University. We hope that Smyhal will help postively impact young adults by counteracting the underdiagnosis of youth anxiety and depression.""")
+  st.markdown("""The Smhyal algorithm is based on a modified version of an artificial neural network (ANN), with accuracies greater than 94% for  anxiety and depression diagnosis. The model was trained on large-scale data for young adults from the publicly-available Substance Abuse and Mental Health Service Administration (SAMHSA) Mental Health Client Level Data (MH-CLD) survey set. The app was created by Avi Verma, based on research work in collaboration with Stanford University. We hope that Smyhal will help postively impact young adults by counteracting the underdiagnosis of youth anxiety and depression.""")
   st.markdown("""None of the data entered in the form or the diagnosis outputs are ever stored or traced.""")
   
   st.header("FAQ")
