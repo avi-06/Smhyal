@@ -32,7 +32,7 @@ hide_streamlit_style = """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
 
 st.title("Smhyal")
-st.subheader("Supporting Mental Health via. AI Learning")
+st.subheader("Supporting Mental Health in Youth via. AI Learning")
 st.markdown("""Smhyal is an all-in-one tool for rapid self-diagnosis for two of the most common, yet critical, psychological disorders among young adults: anxiety and depression.""")
 
 #sidebar information
