@@ -38,20 +38,20 @@ st.markdown("""Smhyal is an all-in-one tool for rapid self-diagnosis for two of 
 #sidebar information
 with st.sidebar:
 
-  #st.markdown(
-  #      f"""
-  #          <style>
-  #              [data-testid="stSidebar"] {{
-  #                  background-image: url(https://drive.google.com/uc?export=view&id=19bGh52gQKRQt_8G_3k5j1mW8FqUB5Plm);
-  #                  background-repeat: no-repeat;
-  #                  padding-top: 10px;
-  #                  background-position: 20px 20px;
-  #                  background-size: 300px 300px
-  #              }}
-  #          </style>
-  #          """,
-  #      unsafe_allow_html=True,
-  #)
+  st.markdown(
+        f"""
+            <style>
+                [data-testid="stSidebar"] {{
+                    background-image: url(https://drive.google.com/uc?export=view&id=1W68IqBMoVako1l3JgyaM629sWDmNoeNG);
+                    background-repeat: no-repeat;
+                    padding-top: 10px;
+                    background-position: 20px 20px;
+                    background-size: 300px 300px
+                }}
+            </style>
+            """,
+        unsafe_allow_html=True,
+  )
   
   st.header("About Smhyal")
   
