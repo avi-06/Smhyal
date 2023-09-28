@@ -1,7 +1,7 @@
 #general imports
 import streamlit as st
 from tensorflow.keras.models import load_model
-from streamlit_js_eval import streamlit_js_eval
+import streamlit_js_eval
 import numpy as np
 
 hide_streamlit_style = """
