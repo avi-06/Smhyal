@@ -255,7 +255,7 @@ def predict_mh(new_x_example):
   prediction_dict = {'Depression':depression, "Anxiety":anxiety}
   return prediction_dict
 
-col1, col2 = st.columns(2)
+col1, col2 = st.columns(2, gap="medium")
 
 with col1:
   bt = st.button('Your Results')
