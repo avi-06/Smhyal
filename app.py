@@ -269,6 +269,6 @@ with col1:
     if dic.get('Depression') == 1 and dic.get('Anxiety') == 1:
       st.write('You are predicted to have both anxiety and depression. It is highly recommended that you consult a psychiatrist.')
 with col2:
-  bt2 = st.button('Reset Results')
+  bt2 = st.button('Reset Form')
   if bt2:
     st.rerun()
