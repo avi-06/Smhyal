@@ -1,6 +1,7 @@
 #general imports
 import streamlit as st
 from tensorflow.keras.models import load_model
+from streamlit_js_eval import streamlit_js_eval
 import numpy as np
 
 hide_streamlit_style = """
@@ -269,6 +270,6 @@ with col1:
     if dic.get('Depression') == 1 and dic.get('Anxiety') == 1:
       st.write('You are predicted to have both anxiety and depression. It is highly recommended that you consult a psychiatrist.')
 with col2:
-  bt2 = st.button('Reset Form')
+  bt2 = st.button('Reload Form')
   if bt2:
-    st.rerun()
+    streamlit_js_eval(js_expressions="parent.window.location.reload()")
