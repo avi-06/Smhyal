@@ -254,7 +254,7 @@ def predict_mh(new_x_example):
   prediction_dict = {'Depression':depression, "Anxiety":anxiety}
   return prediction_dict
 
-bt = st.button('Your Results:')
+bt = st.button('Your Results')
 if bt:
   dic = predict_mh(li)
   if dic.get('Depression') == 0 and dic.get('Anxiety') == 0:
@@ -265,3 +265,7 @@ if bt:
     st.write('You are predicted to have anxiety, but not depression. It is recommended that you consult a psychiatrist.')
   if dic.get('Depression') == 1 and dic.get('Anxiety') == 1:
     st.write('You are predicted to have both anxiety and depression. It is highly recommended that you consult a psychiatrist.')
+    
+bt2 = st.button('Reset Results')
+if bt2:
+  st.rerun()
