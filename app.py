@@ -20,10 +20,6 @@ hide_streamlit_style = """
                 visibility: hidden;
                 height: 0%;
                 }
-                header {
-                visibility: hidden;
-                height: 0%;
-                }
                 footer {
                 visibility: hidden;
                 height: 0%;
