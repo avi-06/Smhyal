@@ -6,7 +6,7 @@ import numpy as np
 
 st.title("Smhyal")
 st.subheader("Supporting Mental Health in Youth via AI Learning")
-st.markdown("""Smhyal is an AI based self-assessment tool for two of the most common, yet critical, psychological disorders among young adults: anxiety and depression.""")
+st.markdown("""Smhyal is an AI based self-assessment tool for two of the most common, yet critical, mental illnesses among young adults: anxiety and depression.""")
 
 #sidebar information
 with st.sidebar:
@@ -28,10 +28,10 @@ with st.sidebar:
   
   st.header("About Smhyal")
   
-  st.markdown("""The Smhyal algorithm is based on a modified version of an artificial neural network (ANN), model with accuracies greater than 94% for predicting anxiety and depression among young adults. The model was trained on the demographic and stressor data of 380,000+ young adults from the publicly-available Substance Abuse and Mental Health Service Administration (SAMHSA) Mental Health Client Level Data (MH-CLD) survey set. The goal of the Smhyal app is to promote self-assessment of psychiatric disorders especially among youth and encourage help-seeking behaviors.""")
+  st.markdown("""The Smhyal algorithm is based on a modified version of an artificial neural network (ANN) model with accuracies greater than 94% for predicting anxiety and depression among young adults. The model was trained on the demographic and stressor data of 380,000+ young adults from the publicly-available Substance Abuse and Mental Health Service Administration (SAMHSA) Mental Health Client Level Data (MH-CLD). The goal of Smhyal is to promote self-assessment of psychiatric disorders among youth and encourage help-seeking behaviors.""")
   st.markdown("""The app was created by Avi Verma at Palo Alto High School, based on his research work done in collaboration with Stanford University.""")
-  st.markdown("""Please note that none of the data entered in the form or the diagnosis outputs are ever stored or traced.""")
-  st.markdown("""We are constantly working on improving the app and will soon make it available in Spanish and Mandarin.  We are also working on adding a companion app to support mental wellbeing.""")
+  st.markdown("""Please note that none of the data entered in the form or the assessment outputs are ever stored or traced.""")
+  st.markdown("""We are constantly working on improving the app and will soon make it available in Spanish and Mandarin.  We are also working on adding an AI companion to support mental wellbeing.""")
   
   st.header("FAQ")
   st.markdown("""
