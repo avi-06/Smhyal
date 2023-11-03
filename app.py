@@ -4,8 +4,6 @@ from tensorflow.keras.models import load_model
 from streamlit_js_eval import streamlit_js_eval
 import numpy as np
 
-st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
-
 st.title("Smhyal")
 st.subheader("Supporting Mental Health in Youth via AI Learning")
 st.markdown("""Smhyal is an AI based self-assessment tool for two of the most common, yet critical, psychological disorders among young adults: anxiety and depression.""")
